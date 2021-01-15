@@ -34,15 +34,39 @@ button.on("click", function() {
     d3.event.preventDefault();
     var inputElement = d3.select("#datetime").property("value");
 
-    console.log(inputElement);
+    var inputCity = d3.select("#city").property("value");
+    var inputState = d3.select("#state").property("value");
+    var inputCountry = d3.select("#country").property("value");
+    var inputShape = d3.select("#shape").property("value");
     
-    var filteredData = tableData.filter(date => date.datetime === inputElement);
 
-    console.log(filteredData);
+    if (inputElement) {
+        var filteredData = tableData.filter(date => date.datetime === inputElement);
+        
+    }  
+    if (inputCity) {
+        var filteredData = tableData.filter(city => city.city === inputCity);
+        
+    }  
+    if (inputState) {
+        var filteredData = tableData.filter(state => state.state === inputState);
+        
+    }  
+    if (inputCountry) {
+        var filteredData = tableData.filter(country => country.country === inputCountry);
+        
+    }  
+    if (inputShape) {
+        var filteredData = tableData.filter(shape => shape.shape === inputShape);
+        
+    }  
+    
 
 
 
 filteredData.forEach(function(UFOReport) {
+    
+
     var row = tbody.append('tr');
 
     Object.entries(UFOReport).forEach(function([key, value]) {
@@ -51,5 +75,4 @@ filteredData.forEach(function(UFOReport) {
         cell.text(value);
     });
 });
-
 });
