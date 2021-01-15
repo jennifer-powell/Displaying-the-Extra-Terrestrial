@@ -31,7 +31,7 @@ button.on("click", function() {
 // Complete the event handler function for the form
     tbody.html("");
     
-    //d3.event.preventDefault();
+    d3.event.preventDefault();
     var inputElement = d3.select("#datetime");
     
     var inputValue = inputElement.property("value");
@@ -43,11 +43,11 @@ button.on("click", function() {
     console.log(filteredData);
 
 
-// Display the filtered dataset
-filteredData.forEach((UFOReport) => {
+
+filteredData.forEach(function(UFOReport) {
     var row = tbody.append('tr');
 
-    Object.entries(UFOReport).forEach(([key, value]) => {
+    Object.entries(UFOReport).forEach(function([key, value]) {
         console.log(key, value);
         var cell = row.append('td');
         cell.text(value);
