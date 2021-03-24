@@ -27,11 +27,5 @@ That's why we are hiring you. We need you to write code that will create a table
     - Made sure to have a column for `date/time`, `city`, `state`, `country`, `shape`, and `comment` at the very least.
     - Used a date form in  HTML document and wrote JavaScript code that will listen for events and search through the `date/time` column to find rows that match user input.
 
-
-- ## Instructions on how to use the program
-    - Step 1
-    - Step 2
-    - Step 3
-
 - ## Findings and conclusion
     - There are many interesting sightings across the United States
